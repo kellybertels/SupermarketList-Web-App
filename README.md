@@ -5,12 +5,12 @@ I used "Glitch.com" as the editor to create this application.
 
 The programming languages used here are:
 
-Javascript
-Json
-Handlebars
-Semantic Ui 
-HTML
-CSS
+Javascript, 
+Json, 
+Handlebars, 
+Semantic Ui, 
+HTML, 
+CSS, 
 
 
   

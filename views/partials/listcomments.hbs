@@ -1,0 +1,33 @@
+<div class="ui comments">
+  <h3 class="ui dividing header">Comments</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  {{#each comments}}
+ 
+    <div class="ui segment comment">
+      
+   <div class="metadata">   
+    <span class="date">Comment left in: {{formatDate date}}</span>
+    </div>
+     
+        <div class="avatar">
+          <i class="ui green big comment alternate outline icon"></i>
+        </div>  
+        <div class="text">
+          {{fullname}}
+        </div>        
+        <div class="text" id="comText">
+          {{commenttext}}
+        </div>
+        
+              
+      
+    </div>
+{{/each}}
+</div>

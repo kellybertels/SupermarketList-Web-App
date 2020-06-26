@@ -1,0 +1,180 @@
+{{> menu}}
+
+<section class="ui two column grid segment">
+  <div class="ui column">
+    
+    <h2 class="ui header">
+  Welcome to the Supermarket List App, {{fullname}}!
+</h2>
+      <p>
+        This app will allow you to add products and manage your supermarket list creating new lists
+        
+        
+       <h4> <ol>
+         How you can use this app:
+         </ol> </h4> 
+          
+        <ul>
+          <li>Control exactly what you will expend in the supermarket</li>
+          <li>Save your favorite items</li>
+          <li>Share with your family members</li>
+          
+      <h4>   
+        To who this app is designed:
+            </h4>  
+          <li>Anyone who wants to save money</li>
+          <li>To people that dont have the time to write a new supermarket list every time they need to buy something</li>
+          <li>Social Care workers can organize and share with their patients their items and expenses, helping them to become more independent</li>  
+        
+          
+    </ul>
+      </p>
+      <div class="buttons">
+        <button class="ui yellow button" onclick="showHide()">
+         Video Tutorial <i class="arrow circle right icon"></i>
+        </button>
+        <button class="ui green button" onclick="alert('Thanks! You\'re okay too')">
+          Like it? <i class="thumbs up icon"></i>
+        </button>
+        <button class="ui pink button" onclick="welcomeUser()">
+          Who are you? <i class="user icon"></i>
+        </button>
+      </div>
+      <div id="readmore" class="ui message">
+        <p>
+          This app was created as part of the assignment for the second year of Software and Systems Development, using a teachers model exercise. 
+          as a further improvement for this app I plan to link it with a data base system that will link this webpage with the Mobile aplication assignment developed using Kotlin Language.
+          <div id ="iframe"> <iframe width="500" height="315" src="https://www.youtube.com/embed/DmnMTsH4fyY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <br>
+          
+          
+      
+        </p>  
+      </div>
+      <div id="welcomeuser" class="ui message" onclick="playVideo()">
+  
+        
+         
+  
+  </div>
+   
+
+<div>
+<div class="ui divider"></div>
+    
+      <h3 class="ui center aligned header">You have stored in the Supermarket list:</h3>
+      <div class="ui three statistics">
+        <div class="ui huge statistic">          
+          <div class="value">
+            {{totallists}}
+            <i class="red tiny shopping cart icon"></i>
+          </div>
+          <div class="label">
+           Supermarket Lists
+          </div>
+        </div>
+        <div class="ui huge statistic">
+          <div class="value">
+            {{totalProducts}}
+             <i class="yellow tiny shopping basket icon"></i>
+          </div>
+          <div class="label">
+            Products
+          </div>
+        </div>
+        <div class="ui huge statistic">
+          <div class="value">
+            {{totalprice}}
+             <i class="green tiny money bill alternate outline icon"></i>
+          </div>
+          <div class="label">
+           Total Of Money Spent
+          </div>
+        </div>
+        
+        
+    
+        
+      
+        
+        
+        
+          <div class="ui huge statistic">
+          <div class="value" href="/mlist">
+           
+             <i class="pink tiny handshake outline icon"></i>
+          </div>
+          <div class="label">
+            Your List With Most Items:
+            <div class="b">{{listMostProducts}}</div>
+          </div>
+            
+        </div>
+        
+        <div class="ui huge statistic">
+          <div class="value" href="/mlist">
+           
+             <i class="green tiny handshake outline icon"></i>
+          </div>
+          <div class="label">
+            Supermarket You Buy Most / Location:
+            <div class="b">{{productMostquantity}}</div>
+          </div>            
+        </div>
+
+        
+        
+    </div>
+  </div>
+
+<div>
+<div class="ui divider"></div>
+    
+      <h3 class="ui center aligned header">This Market List App now contains:</h3>
+      <div class="ui center aligned two statistics">
+                 
+           <div class="ui small statistic">
+          <div class="value">
+            <img src="{{picture}}" class="ui circular inline image"> 
+           
+            {{totalUsers}}
+             
+          </div>
+          <div class="label">
+            Team Members Like You
+          </div>
+        </div>
+         
+    </div>
+  </div>
+
+
+
+      <div class="ui divider"></div>   
+   </div>
+  
+  <div class="ui column">
+    <div class="ui grid">
+      <div class="ui eight wide column">
+        <img class="ui small Rounded image" src="https://cdn.glitch.com/edf92019-885d-4c1f-8e15-2e5e56f869ee%2Fcarrot.jpg?v=1583231932481">
+      </div>
+      <div class="ui eight wide column">
+        <img class="ui small circular image" src="https://cdn.glitch.com/edf92019-885d-4c1f-8e15-2e5e56f869ee%2Fcheese.jpg?v=1583231935935">
+      </div>
+      <div class="ui eight wide column">
+        <img class="ui small circular image" src="https://cdn.glitch.com/edf92019-885d-4c1f-8e15-2e5e56f869ee%2Fjam.jpg?v=1583231942288">
+      </div>
+      <div class="ui eight wide column">
+        <img class="ui small Rounded image" src="https://cdn.glitch.com/edf92019-885d-4c1f-8e15-2e5e56f869ee%2Ftrolley.jpg?v=1583231964047">
+      </div>
+      <div class="ui eight wide column">
+        <img class="ui small Rounded image" src="https://cdn.glitch.com/edf92019-885d-4c1f-8e15-2e5e56f869ee%2Fbeef.jpg?v=1583231952853">
+      </div>
+      <div class="ui eight wide column">
+        <img class="ui small circular image" src="https://cdn.glitch.com/edf92019-885d-4c1f-8e15-2e5e56f869ee%2Ffish.jpg?v=1583231945486">
+      </div>
+      
+      
+    </div>
+  </div>
+</section>

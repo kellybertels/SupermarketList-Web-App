@@ -12,7 +12,7 @@ The languages used here are:
 -HTML
 -CSS
 
-The editor I used here was Glitch.com 
+The editor I used here was Glitch.com, recomended from the teachers to be used because it allows them easily help us remotely as weell for us to keep tracking of our progress and save previous versions of our project, in case something goes wrong.  
 
 
 # Features
@@ -50,3 +50,5 @@ Regards,
 Kelly
 
 my glitch profile is https://glitch.com/@kellybertels  - feel free to explore. 
+
+

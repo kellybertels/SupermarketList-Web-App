@@ -1,0 +1,153 @@
+{{#unless mlist.products}}
+  <h3 class="ui center aligned message">It's very quiet in here... start adding some products to your list!</h3>
+{{/unless}}
+
+{{#if mlist.products}}
+
+<table class="ui relative striped table">
+  <thead>
+    <tr>
+      <th class="one wide">Product</th>
+      <th class="one wide">Quantity</th>     
+      <th class="one wide">Price</th>
+      <th class="one wide">Total Price</th>      
+      <th class="one wide"> </th>
+    </tr>
+  </thead>  
+  
+  {{!-- {{code for show total price in this list }} --}}
+  <section>
+   <div class="ui left huge statistic">          
+          <div class="value">
+            {{totallists}}
+            <i class="red tiny shopping cart icon"></i>
+          </div>
+          <div class="label">
+           this Supermarket List total price
+          </div>
+        </div>
+  </section>
+  
+  {{!-- {{code for cards }} --}}
+  
+  <div class="ui centered cards">
+  {{#each mlist.products}}
+    <div class="ui card">
+      <div class="image">
+        <img src="{{picture}}">
+      </div>
+      <div class="content">
+        
+        <a class="header">{{uppercase title}}</a>
+      
+        <p>
+        <div class = "header">
+        <label>Price:</label>
+        <a class="header">{{price}}</a>
+        </div>
+        <div class = "header">
+        <label>Quantity:</label>
+        <a >{{quantity}}</a>
+        </div>
+        <div class = "header">
+        <label>Total price:</label>
+        <a class="header">{{tprice quantity price}}</a>
+        </div>
+        </p>
+      </div>
+      <div class="extra content">
+          
+<p>
+<span id="ratingProduct"> </span>
+</p>
+<button class="ui star icon button" onclick="getRatingProduct()">
+   <i class="gold star icon"></i>
+</button> 
+        
+        
+        
+        <a href="/mlist/{{../mlist.id}}/deleteproduct/{{id}}" class="ui icon button">
+          <i class="icon trash"></i>
+        </a>
+      </div>
+    </div>
+  {{/each}}
+</div>  
+  
+<tbody>
+    {{#each mlist.products}}
+    <form class = "ui form" action="/mlist/{{../mlist.id}}/updateproduct/{{id}}" method="POST">
+    <tr class="fields">
+      <td class="field">
+        <span class="ui small input">
+         <input placeholder="Title" type="text" size="30" name="title" autofocus required value = "{{title}}">
+        </span>
+      </td>
+      <td class="field">
+        <span class="ui small input">
+          <input placeholder="quantity of products" type="number" size="30" name="quantity" required value = "{{quantity}}">
+        </span>
+      </td>
+      
+      <td class="field">
+        <span class="ui small input">
+          <input placeholder="Price" type="text" name="price" required value = "{{price}}">
+        </span>
+      </td>
+      
+      <td class="field">
+        <span class="ui small input">
+          <input placeholder="Total Price" type="text" name="totalPrice" required value = "{{tprice quantity price}}">
+        </span>
+      </td>
+      
+      
+      
+      <td class="center aligned">
+        
+        
+        <button class="ui submit icon button">
+          
+          <a href="/mlist/{{../mlist.id}}/updateproduct/{{id}}" >
+          <i class="icon edit alternate"></i>
+        </a>
+        </button>
+        
+        
+        
+        
+      </td>
+      <td class="center aligned">
+        <a href="/mlist/{{../mlist.id}}/deleteproduct/{{id}}" class="ui icon button delproduct">
+          <i class="icon trash"></i>
+        </a>
+      </td>
+    </tr>
+    </form> 
+    {{/each}}
+  </tbody>
+  
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>
+  <span id="rating"> </span>
+</p>
+
+<button class="ui blue button" onclick="getRating()">
+  Rate This Supermarket List! <i class="star icon"></i>
+</button>
+
+  
+{{/if}}

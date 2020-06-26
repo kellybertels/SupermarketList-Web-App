@@ -1,0 +1,25 @@
+
+
+{{#each mlists}}
+  <section class="ui stacked segment">
+    <h2 class="ui header">
+      {{uppercase title}}
+      {{name}}
+{{location}}
+    </h2>
+    <p> List name: {{uppercase title}} </p>
+   
+    <p> Supermarket Name: {{capitalise name}} </p>
+    <p> Supermarket Location: {{capitalise location}} </p>
+     <div class="metadata">
+    <span class="date">Created in: {{formatDate date}}</span>
+    </div>
+    <a href="/mlist/{{id}}" class="ui icon button">
+      <i class="icon list open"></i>
+    </a>
+    <a href="/dashboard/deleteMlist/{{id}}" class="ui icon button">
+      <i class="icon trash"></i>
+    </a>
+    
+  </section>
+{{/each}}

@@ -1,0 +1,31 @@
+<form class="ui stacked segment form" action="/mlist/{{mlist.id}}/addproduct" method="POST" enctype="multipart/form-data">
+  <div class="five fields">
+    <div class="field">
+      <label>Product Name</label>
+      <input placeholder="Name" type="text" name="title" autofocus required>
+    </div>
+    <div class="field">
+      <label>Quantity</label>
+      <input placeholder="quantity of products" type="number" name="quantity" id = "quantity" required>
+    </div>
+  
+    <div class="field">
+    <label>Price</label>
+    <div class="input-symbol-euro">
+    <input placeholder="Price" type="double" value="0" min="1" step="1" name="price" id = "price" >
+    </div>
+    </div>
+    
+    
+     <div class="field">
+      <label>TotalPrice</label>
+      <input placeholder="Total Price" type="text" id = "total" name="total" readonly>
+    </div>
+    <div class="field">
+      <label>Product Image</label>
+      <input placeholder="image" type="file" name="picture" autofocus required>
+    </div>
+  
+  </div>
+  <button class="ui blue submit button">Add Product</button>
+</form>

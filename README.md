@@ -27,7 +27,7 @@ You need to Sign In before you Log in, as authentication is used, you will not b
 I decided to locate the add image functionality in the add product page,
 once it makes more sense for my app, because the users will upload photos of their items / products, this helps the user to identify your favorite coffe brand without expending time adding brand name and another details. 
 
-#Knowing bugs
+# Knowing bugs
 
 - the total price is not considering the quantity of products, it is just adding the price for one product
 - I would like to add the code if quantity field > 0, multiply tprice (data) for quantity(data).
@@ -40,10 +40,16 @@ So I commented out those lines (start.js) //listMostProducts:listMostProducts.ti
 ( to solve this problem I tried to add an if statement ( no sucessfull), and a Try and catch error, even a helper), 
 so I deleted the codes and I gave up, you might find some "commented out" code about this try. 
 
-#Points to future improve
+# Points to future improve
 -The sharing functionality, so this will allow the person to share with the household the supermarket list, as well social care workers, to share with their patients allowing them to increase their independancy. 
 -make it easier to use and more intuitive, testings showed that some people do not click on the icon links but in the images or section, hoping this will open the another page for them. 
 
+# SECURITY BREACH /05 Aug 2020
+reference: GHSA-q3w9-g74q-vp5f
+Denial of service in express-fileupload
+upgrade to version 1.1.6-alpha6 or later to fix it. 
+can allow attackers to perform a denial-of-service (DoS) attack on a server or get arbitrary code execution
+for more info view: https://securityaffairs.co/wordpress/106782/security/nodejs-express-fileupload-module-flaw.html 
 
 
 Regards,
